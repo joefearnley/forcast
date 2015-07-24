@@ -1,2 +1,2 @@
-# weather-forcast
-What the forcast today, bro?
+# Forcast
+What the weather forecast today, bro?
