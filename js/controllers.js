@@ -1,9 +1,13 @@
-app.controller('HomeController', ['$scope', '$resource', 'cityService',
-                function($scope, $resource, cityService) {
+app.controller('HomeController', ['$scope', '$location', 'cityService',
+                function($scope, $location, cityService) {
     $scope.city = cityService.city;
     $scope.$watch('city', function() {
         cityService.city = $scope.city;
     });
+
+    $scope.findForecast = function() {
+        $location.path('/forecast')
+    }
 }]);
 
 app.controller('ForecastController', ['$scope', '$resource', '$routeParams', 'cityService',
